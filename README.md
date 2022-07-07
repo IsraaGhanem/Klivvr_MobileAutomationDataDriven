@@ -1,13 +1,13 @@
     ##### Klivvr Mobile Automation Framework  #######
 1- Make sure that the following libraries are set upped on ur machine
 
--- AppiumLibrary from the following Command
+-- AppiumLibrary from the following Command >>>
 pip install robotframework-appiumlibrary
 
--- Process Library from the following Command
+-- Process Library from the following Command >>>
  pip install robotframework-processlibrary
  
- -- Data Driven Library from the following Command
+ -- Data Driven Library from the following Command >>>
 pip install robotframework-datadriver 
 pip install --upgrade robotframework-datadriver
 pip install --upgrade robotframework-datadriver[XLS]
