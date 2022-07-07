@@ -18,12 +18,17 @@ our requirments
 and for Common file This contain common needed keywords
 Such as Run Automatic Appium Server , Open App >>> to open mobile app 
 
---1-- P_SignUp             --6-- SendMoney
---2-- P_LogIn              --7- RequestMoney
---3-- P_KYC                --8-- SplitBill
---4-- P_AddMoney           --9-- Transactions
+--1-- P_SignUp             
+--2-- P_LogIn              
+--3-- P_KYC               
+--4-- P_AddMoney           
 --5-- Common              
-
+--6-- SendMoney
+--7- RequestMoney
+ --8-- SplitBill
+ --9-- Transactions
+ 
+ 
 3- For Results Folder This contain the file represent results in details pass, Fail test cases 
 excution time and more information
 
