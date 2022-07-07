@@ -19,9 +19,9 @@ and for Common file This contain common needed keywords
 Such as Run Automatic Appium Server , Open App >>> to open mobile app 
 
 --1-- P_SignUp             
---2-- P_LogIn              
+--2-- P_LogIn             
 --3-- P_KYC               
---4-- P_AddMoney           
+--4-- P_AddMoney     
 --5-- Common              
 --6-- SendMoney
 --7- RequestMoney
