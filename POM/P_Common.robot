@@ -1,6 +1,6 @@
 *** Settings ***
 Library  AppiumLibrary
-
+Library  Process
 
 *** Variables ***
 ${GET_STARTED_BUTTON}  //android.widget.Button[@resource-id='com.klivvr.consumer.qa:id/btn_getStarted']
@@ -13,7 +13,8 @@ Run Automatic Appium Server
     sleep    10s
 
 Kill Appium Server
-    Terminate Process appiumserver    kill=True
+    terminate process  appiumserver    kill=True
+
 
 Open APP
     open application  http://localhost:4723/wd/hub  platformName=Android  deviceName=emulator-5556  appPackage=com.klivvr.consumer.qa  appActivity=com.klivvr.consumer.app.ui.splash.SplashActivity  automationName=Uiautomator2
@@ -21,4 +22,13 @@ Open APP
 
 Close App
     close application
+
+
+Suite SetUp KW
+    Run Automatic Appium Server
+    Open APP
+
+Suite Teardown KW
+    Close App
+    Kill Appium Server
 

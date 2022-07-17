@@ -3,7 +3,6 @@ Library  AppiumLibrary
 
 *** Variables ***
 ${AddMoneyButton_Home}      //android.widget.ImageButton[@resource-id='com.klivvr.consumer.qa:id/fab']
-${Amount_AddMoney}      //android.widget.RadioButton[@text='${ChooseAmount}']
 ${Continuo_AddMoney}        //android.widget.Button[@resource-id='com.klivvr.consumer.qa:id/btn_continue']
 ${TOPUp_AddMoney}       //android.view.View[@text='Payment Details']
 ${Visa_TopUp}       //android.widget.RadioButton[@resource-id='card_type_001']

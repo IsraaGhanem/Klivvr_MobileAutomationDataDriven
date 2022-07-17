@@ -7,6 +7,9 @@ Resource  ../POM/P_KYC.robot
 
 Test Template             KYC Full Process
 
+Suite Setup     P_Common.Suite SetUp KW
+Suite Teardown      P_Common.Suite Teardown KW
+
 *** Variable ***
 ${Dateofbirth}      11/13/96
 
@@ -26,10 +29,6 @@ KYC Full Process
     ...  ${TheirName_SanctionYesData}     ${Address_SanctionYesData}     ${WhichCountryRelated_SanctionYesData}
     ...  ${TypeOfRelation_SanctionYesData}       ${ExpectedTypeofTransaction_SanctionYesData}
     ...  ${Address_ShippingAddressData}      ${Govornerate_ShippingAddressData}      ${Area/District_ShippingAddressData}
-
-#### Run appium and open app
-    Run Automatic Appium Server
-    Open APP
 
 #### Log In
     click element  ${SIGN_IN_BUTTON}

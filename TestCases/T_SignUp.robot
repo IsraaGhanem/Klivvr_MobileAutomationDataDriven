@@ -6,6 +6,9 @@ Resource  ../POM/P_Sign_Up.robot
 
 Test Template    Sign Up for a New User
 
+Suite Setup     P_Common.Suite SetUp KW
+Suite Teardown      P_Common.Suite Teardown KW
+
 *** Test Cases ***
 SIGN UP for a New User
     Sign Up for a New User  ${Invitation_Code}  ${Mobile_Number}  ${First_LegalName}  ${Last_LegalName}   ${OTP}     ${Password}
@@ -13,8 +16,6 @@ SIGN UP for a New User
 *** Keywords ***
 Sign Up for a New User
     [Arguments]     ${Invitation_Code}  ${Mobile_Number}  ${First_LegalName}  ${Last_LegalName}   ${OTP}     ${Password}
-    Run Automatic Appium Server
-    Open APP
     wait until page contains element        ${GET_STARTED_BUTTON}
     click element   ${GET_STARTED_BUTTON}
     wait until page contains element    ${InvitationCode_SignUp}

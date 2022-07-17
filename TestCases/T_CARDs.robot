@@ -8,6 +8,8 @@ Resource  ../POM/P_CARDs.robot
 ### Here u right the Keyword u want to get variables from .xlsx sheet to
 Test Template       Freeze Card
 
+Suite Setup     P_Common.Suite SetUp KW
+Suite Teardown      P_Common.Suite Teardown KW
 
 *** Test Cases ***
 Freeze Card TC
@@ -17,8 +19,6 @@ Freeze Card TC
 
 Freeze Card
     [Arguments]     ${Mobile_Number}        ${OTP}      ${Password}
-    Run Automatic Appium Server
-    Open APP
     ## LOg IN
     wait until page contains element        ${SIGN_IN_BUTTON}
     click element  ${SIGN_IN_BUTTON}

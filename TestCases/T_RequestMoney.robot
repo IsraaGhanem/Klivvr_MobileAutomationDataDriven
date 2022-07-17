@@ -7,6 +7,9 @@ Resource  ../POM/P_RequestMoney.robot
 
 Test Template       Request Money by Number
 
+Suite Setup     P_Common.Suite SetUp KW
+Suite Teardown      P_Common.Suite Teardown KW
+
 *** Test Cases ***
 Request Money TC
         Request Money by Number
@@ -15,8 +18,7 @@ Request Money TC
 Request Money by Number
    [Arguments]      ${Mobile_Number}        ${OTP}      ${Password}     ${REQUEST_MONEY_NUMBER}
    ...  ${AMOUNT_VALUE}     ${REQUEST_EXPIRY_DATE}      ${ADD_NOTE}
-   Run Automatic Appium Server
-   Open APP
+
    ## Log In
    click element  ${SIGN_IN_BUTTON}
    wait until page contains element    ${MOBILE_NUMBER_FIELD}

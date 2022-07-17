@@ -7,7 +7,12 @@ Resource  ../POM/P_AddMoney.robot
 
 Test Template       Top Up with Specific Amount
 
+Suite Setup     P_Common.Suite SetUp KW
+Suite Teardown      P_Common.Suite Teardown KW
+
 *** Test Cases ***
+## For ${ChooseAmount} Variable, you able to enter it in excel sheet with different values
+## 100 , 200 , 500 , 1000 , 2000 , 5000
 ADD MONEY
     Log In with Already Registered User      ${Mobile_Number}        ${OTP}      ${Password}
     Top Up with Specific Amount  ${ChooseAmount}
@@ -16,9 +21,6 @@ ADD MONEY
 
 Top Up with Specific Amount
     [Arguments]     ${Mobile_Number}        ${OTP}      ${Password}     ${ChooseAmount}
-    Run Automatic Appium Server
-    Open APP
-
     #### Log In with Already Registered User
     click element  ${SIGN_IN_BUTTON}
     wait until page contains element    ${MOBILE_NUMBER_FIELD}

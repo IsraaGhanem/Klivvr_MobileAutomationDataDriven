@@ -7,6 +7,9 @@ Resource  ../POM/P_SendMoney.robot
 
 Test Template       send_money_by_contacts
 
+Suite Setup     P_Common.Suite SetUp KW
+Suite Teardown      P_Common.Suite Teardown KW
+
 *** Test Cases ***
 Send Money By Mobile Number TC
         #send_money_by_mobile
@@ -15,8 +18,6 @@ Send Money By Mobile Number TC
 send_money_by_mobile
     [Arguments]    ${Mobile_Number}        ${OTP}      ${Password}
     ...  ${send_money_mobile_number}    ${amount_to_be_sent}
-    Run Automatic Appium Server
-    Open APP
 
     ### Log In App
     click element  ${SIGN_IN_BUTTON}
